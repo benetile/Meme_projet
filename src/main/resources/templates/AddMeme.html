@@ -14,6 +14,10 @@
             <legend>Remplir le formulaire</legend>
             <form th:action="@{/add}" th:object="${meme}" method="post" novalidate>
                 <div class="form-group">
+                    <div class="form-group col-md-6">
+                        <label for="id">Id Meme</label><br>
+                        <input type="text" class="form-control" id="id" Name="id"><br>
+                    </div>
                     <div class="form-col">
                         <div class="form-group col-md-6">
                             <label for="name">Name</label><br>
@@ -30,7 +34,7 @@
                         <input type="text" class="form-control" id="width"  Name="width"><br>
                     </div>
                     <div class="form-group col-md-6">
-                        <label for="height">URL</label><br>
+                        <label for="height">Height</label><br>
                         <input type="text" class="form-control" id="height" Last Name="height"><br>
                     </div>
                     <div class="form-group col-md-6">

@@ -12,6 +12,10 @@
         <div class="container">
             <div th:object="${meme}" class="text-center">
                 <div class="form-row">
+                    <label>ID DB : </label>
+                    <label th:text="${meme.idMeme}"></label>
+                </div>
+                <div class="form-row">
                     <label>ID Meme : </label>
                     <label th:text="${meme.id}"></label>
                 </div>
@@ -21,7 +25,7 @@
                 </div>
                 <div class="form-row">
                     <label>URL : </label>
-                    <img th:src="${meme.url}">
+                    <img th:src="${meme.url}" width="500px" height="500px">
                 </div>
                 <div class="form-row">
                     <label>Width : </label>
