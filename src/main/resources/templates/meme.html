@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.thymeleaf.org ">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <title>Title</title>
+</head>
+<body>
+        <div class="container">
+            <div th:object="${meme}" class="text-center">
+                <div class="form-row">
+                    <label>ID Meme : </label>
+                    <label th:text="${meme.id}"></label>
+                </div>
+                <div class="form-row">
+                    <label>Name : </label>
+                    <label th:text="${meme.name}"></label>
+                </div>
+                <div class="form-row">
+                    <label>URL : </label>
+                    <img th:src="${meme.url}">
+                </div>
+                <div class="form-row">
+                    <label>Width : </label>
+                    <label th:text="${meme.width}"></label>
+                </div>
+                <div class="form-row">
+                    <label>Height : </label>
+                    <label th:text="${meme.height}"></label>
+                </div>
+                <div class="form-row">
+                    <label>Box Count : </label>
+                    <label th:text="${meme.box_count}"></label>
+                </div>
+            </div>
+        </div>
+</body>
+</html>

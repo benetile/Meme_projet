@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.thymeleaf.org ">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+        <div class="container">
+            <hr>
+            <div th:object="${message}">
+                <div th:if="${message != null}"  class="alert alert-success">
+                    <span th:text="${message}"></span>
+                </div>
+            </div>
+            <hr>
+            <table class="table table-bordered table-dark">
+                <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Ref Meme</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">URl</th>
+                    <th scope="col">Width</th>
+                    <th scope="col">Height</th>
+                    <th scope="col">Box Count</th>
+
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="meme :${memes}">
+                    <th th:text="${meme.idMeme}"></th>
+                    <th th:text="${meme.id}"></th>
+                    <th th:text="${meme.name}"></th>
+                    <th><img th:src="${meme.url}" width="100px" height="100px"></th>
+                    <th th:text="${meme.width}"></th>
+                    <th th:text="${meme.height}"></th>
+                    <th th:text="${meme.box_count}"></th>
+                </tr>
+                </tbody>
+            </table>
+            <hr>
+            <div class="text-center">
+                <a class="btn btn-primary" href="/saveAll">Enregistrer les meme</a>
+                <a class="btn btn-danger" href="">Retour</a>
+            </div>
+            <hr>
+        </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.thymeleaf.org ">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <title>Title</title>
+</head>
+<body>
+    <div class="text-center">
+        <div class="container">
+            <legend>Remplir le formulaire</legend>
+            <form th:action="@{/add}" th:object="${meme}" method="post" novalidate>
+                <div class="form-group">
+                    <div class="form-col">
+                        <div class="form-group col-md-6">
+                            <label for="name">Name</label><br>
+                            <input type="firstname" class="form-control" id="name" name="name"><br>
+                        </div>
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label for="url">URL</label><br>
+                        <input type="text" class="form-control" id="url" Name="url"><br>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="width">Width</label><br>
+                        <input type="text" class="form-control" id="width"  Name="width"><br>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="height">URL</label><br>
+                        <input type="text" class="form-control" id="height" Last Name="height"><br>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="box_count">Box Count</label><br>
+                        <input type="text" class="form-control" id="box_count" Last Name="box_count"><br>
+                    </div>
+                    <div>
+                        <button class="btn btn-primary" type="submit">Confirmer</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
